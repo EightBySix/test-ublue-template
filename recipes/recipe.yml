@@ -8,7 +8,7 @@ packages:
   - python3-pycoral
 
 
-# Add udev rules for Coral USB
+# Add udev rules for Coral USB 
 postprocess:
   - |
     echo 'SUBSYSTEM=="usb", ATTR{idVendor}=="1a6e", MODE="0666", GROUP="plugdev"' \
