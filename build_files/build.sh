@@ -1,18 +1,18 @@
 #!/bin/bash
 set -ouex pipefail
 
-### Base example package
+### Example base package
 dnf5 install -y tmux
 
 ### Dependencies for conversion and Python bindings
 dnf5 install -y wget alien python3-pip python3-devel gcc
 
-### Download Coral runtime (Debian package)
+### Download Coral runtime (Debian package for x86_64)
 wget https://packages.cloud.google.com/apt/pool/libe/libedgetpu/libedgetpu1-std_15.0_amd64.deb
 
 ### Convert .deb to .rpm and install
 alien -r libedgetpu1-std_15.0_amd64.deb
-rpm-ostree install ./libedgetpu1-std-15.0-1.x86_64.rpm
+rpm -ivh ./libedgetpu1-std-15.0-1.x86_64.rpm
 
 ### Install Python bindings
 pip3 install pycoral
