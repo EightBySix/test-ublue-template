@@ -18,5 +18,5 @@ cat <<'EOF' > /etc/udev/rules.d/99-edgetpu-accelerator.rules
 SUBSYSTEM=="usb", ATTR{idVendor}=="1a6e", MODE="0666", GROUP="plugdev"
 EOF
 
-#### Example for enabling a System Unit File
+#### Example for enabling a System Unit File 
 systemctl enable podman.socket
