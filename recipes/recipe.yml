@@ -4,9 +4,9 @@ image-name: ghcr.io/eightbysix/test-ublue-template
 signing: true
 
 packages:
-  - libedgetpu
+  - libedgetpu1-std
   - python3-pycoral
-  - libusb1
+
 
 # Add udev rules for Coral USB
 postprocess:
